@@ -38,7 +38,7 @@ public class MultiImageViewer extends JFrame{
 				reader.setInput(imageIn);
 				while(iter.hasNext()){
 					img = ImageIO.read(imageIn);
-					
+					// WAS MUSS NOCH HIER REIN???
 					iter.next();
 				}
 			} catch (IOException e) {
@@ -49,7 +49,7 @@ public class MultiImageViewer extends JFrame{
 	}
 	
 	public void sort(){
-		
+		//WIE UND WO LAYOUT GESTALTEN???
 		this.getContentPane().setLayout(new GridLayout(2,2));
 		
 	}
