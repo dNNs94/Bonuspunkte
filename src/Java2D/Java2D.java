@@ -9,11 +9,11 @@ import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
-import java.awt.geom.Line2D.Double;
+
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
-import java.util.Collection;
+
 import java.util.List;
 
 import javax.swing.JFrame;
@@ -95,8 +95,6 @@ public class Java2D extends JFrame {
 
 	}
 	
-	
-	
 	private class DrawingComponent extends JPanel { 
 		
 		private static final long serialVersionUID = 1L;
@@ -118,7 +116,6 @@ public class Java2D extends JFrame {
 		}
 	}
 
-	
 	public static void main(String[] args) {
 		// TODO Automatisch generierter Methodenstub
 		new Java2D();
