@@ -2,9 +2,10 @@ package Rennsimulation;
 
 public class Pilot extends Teammitglieder {
 	
-	private static int nummer;
+	private int nummer;
 	private int siege;
 	private int gehalt;
+	private Verwaltung<Pilot> list;
 	
 	public Pilot(){
 		
@@ -15,7 +16,7 @@ public class Pilot extends Teammitglieder {
 		this.vorname = vorname;
 		this.nationalität = nationalität;
 		this.nummer = nummer;
-		Verwaltung.addList(this);
+		list.addListPilot(nummer, this);
 	}
 	
 	public Pilot(String name, String vorname, String nationalität, int nummer, int siege, int gehalt){
@@ -23,12 +24,13 @@ public class Pilot extends Teammitglieder {
 		this.vorname = vorname;
 		this.nationalität = nationalität;
 		this.nummer = nummer;
+		list.addListPilot(nummer, this);
 		this.siege = siege;
 		this.gehalt = gehalt;
 	}
 	
 	
-	public void setNummer( int nummer){
+	public void setNummer( int nummer ){
 		this.nummer = nummer;
 	}
 	
@@ -36,7 +38,7 @@ public class Pilot extends Teammitglieder {
 		this.siege = siege;
 	}
 	
-	public static int getNummer(){
+	public int getNummer(){
 		return nummer;
 	}
 	
@@ -44,7 +46,7 @@ public class Pilot extends Teammitglieder {
 		return siege;
 	}
 	
-	public int berechneGehalt(int gehalt){
+	public int berechneGehalt(){
 		gehalt = 100000 + siege*50000;		
 		return gehalt;
 	}

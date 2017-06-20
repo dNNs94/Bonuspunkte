@@ -5,23 +5,30 @@ public class Mechaniker extends Teammitglieder {
 	private String spezialgebiet;
 	private int reparaturen;
 	private int gehalt;
+	private int nummer;
+	private Verwaltung<Mechaniker> list;
 	
 	public Mechaniker(){
 		
 	}
 	
-	public Mechaniker(String name, String vorname, String nationalität, String spezialgebiet){
+	public Mechaniker(String name, String vorname, String nationalität, String spezialgebiet, int nummer){
 		this.name = name;
 		this.vorname = vorname;
 		this.nationalität = nationalität;
 		this.spezialgebiet = spezialgebiet;
+		this.nummer = nummer;
+		list.addListMechanic(nummer, this);
+		
 	}
 	
-	public Mechaniker(String name, String vorname, String nationalität, String spezialgebiet, int reparaturen, int gehalt){
+	public Mechaniker(String name, String vorname, String nationalität, String spezialgebiet, int nummer, int reparaturen, int gehalt){
 		this.name = name;
 		this.vorname = vorname;
 		this.nationalität = nationalität;
 		this.spezialgebiet = spezialgebiet;
+		this.nummer = nummer;
+		list.addListMechanic(nummer, this);
 		this.reparaturen = reparaturen;
 		this.gehalt = gehalt;
 	}
@@ -34,9 +41,9 @@ public class Mechaniker extends Teammitglieder {
 		this.reparaturen = reparaturen;
 	}
 	
-	/*public void setGehalt ( int gehalt ){
+	public void setGehalt ( int gehalt ){
 		this.gehalt = gehalt;
-	}*/
+	}
 	
 	public String getSpezialgebiet( ){
 		return spezialgebiet;
@@ -46,9 +53,9 @@ public class Mechaniker extends Teammitglieder {
 		return reparaturen;
 	}
 	
-	/*public int getGehalt(){
-		return gehalt
-	}*/
+	public int getGehalt(){
+		return gehalt;
+	}
 	
 	public int berechneGehalt(int gehalt){
 		gehalt = 25000 + reparaturen*20000;		

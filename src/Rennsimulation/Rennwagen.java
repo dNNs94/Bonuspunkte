@@ -1,12 +1,20 @@
 package Rennsimulation;
 
-public class Rennwagen {
+public class Rennwagen extends Teammitglieder {
 
 	private int anzahlWagen;
-	private Pilot wagenPilot;
-	private int wagennummer;
-	private boolean isDefekt;	
+	private Pilot p;
+	private int nummer;
+	private boolean isDefekt;
+	private Verwaltung<Rennwagen> list;
 	
+	public Rennwagen(Pilot p, int nummer, boolean isDefekt){
+		this.p = p;
+		this.nummer = nummer;
+		this.isDefekt = isDefekt;
+		list.addListCar(nummer, this);
+		
+	}
 	
 	public void setAnzahl(int anzahlWagen){
 		this.anzahlWagen = anzahlWagen;
@@ -17,11 +25,11 @@ public class Rennwagen {
 	}
 	
 	public void setWagennummer(int wagennummer){
-		this.wagennummer = wagennummer;
+		this.nummer = wagennummer;
 	}
 	
 	public void setPilot(Pilot wagenPilot){
-		this.wagenPilot = wagenPilot;
+		this.p = p;
 	}
 	
 	public int getAnzahl(){
@@ -33,10 +41,10 @@ public class Rennwagen {
 	}
 	
 	public int getWagennummer(){
-		return wagennummer;
+		return nummer;
 	}
 	
 	public Pilot getPilot(){
-		return wagenPilot;
+		return p;
 	}
 }
