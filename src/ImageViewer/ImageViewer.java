@@ -35,8 +35,9 @@ public class ImageViewer extends JPanel{
 		window.setSize(640, 320);
 		window.setLayout(new BorderLayout());
 		
-		ImageViewer i = new ImageViewer("src/images/norris01.jpg", 640, 320);
+		ImageViewer i = new ImageViewer("src/ImageViewer/images/norris01.jpg", 640, 320);
 		window.getContentPane().add(i, BorderLayout.CENTER);
+		window.setResizable(false);
 		window.setVisible(true);
 	}
 
