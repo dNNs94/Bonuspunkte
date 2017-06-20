@@ -34,10 +34,12 @@ public class MultiImageViewer extends JFrame{
 		this.width = width;
 		this.height = height;
 		setSize(640, 320);
+		JPanel panel = new JPanel(new GridLayout(2,2));
+		this.setContentPane(panel);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
-		setLayout(new GridLayout(2,2));
-		this.add(new DrawingComponent());
+		//setLayout(new GridLayout(2,2));
+		panel.add(new DrawingComponent());
 		setVisible(true);
 	}
 	
