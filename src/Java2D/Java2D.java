@@ -27,7 +27,7 @@ public class Java2D extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private Point2D start = new Point2D.Double(0, 95);
 	private Point2D end = new Point2D.Double(345, 95);
-	
+	//Liste für jeden Typ Grafik
 	private List<Line2D.Double> list = new ArrayList<>();
 	private List<Rectangle2D.Double> list1 = new ArrayList<>();
 	private List<Ellipse2D.Double> list2 = new ArrayList<>();
