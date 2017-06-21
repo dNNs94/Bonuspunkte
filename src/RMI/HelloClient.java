@@ -9,7 +9,7 @@ public class HelloClient {
 	public static void main(String[] args) throws RemoteException, NotBoundException {
 		try {
 			//IP via ipconfig auflösen - localhost auf Client-Seite durch IP ersetzen
-			HelloInterface obj = (HelloInterface) Naming.lookup("rmi://172.22.5.21:12345/Hello");
+			HelloInterface obj = (HelloInterface) Naming.lookup("rmi://"+HelloImpl.getClientHost()+"/Hello");
 			System.out.println(obj.sayHello("Dennis"));
 
 		} catch (Exception e) {
